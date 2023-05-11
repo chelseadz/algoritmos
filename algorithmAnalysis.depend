@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1683702665 source:c:\users\chels\onedrive\documentos\c\algorithmanalysis\main.cpp
+	<iostream>
+	<Algoritmos.h>
+	<matrices.h>
+	<iostream>
+	<sys/time.h>
+	<stdlib.h>
+	<cmath>
+
+1683700023 c:\users\chels\onedrive\documentos\c\algorithmanalysis\include\algoritmos.h
+	<vector>
+
+1683703004 c:\users\chels\onedrive\documentos\c\algorithmanalysis\include\matrices.h
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<random>
+	<chrono>
+	<iomanip>
+	<type_traits>
+
