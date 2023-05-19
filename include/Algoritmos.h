@@ -225,4 +225,20 @@ void magic(int n) {
     }
 }
 
+int fibo(int n){
+
+    if(n <= 1) return n;
+    else{
+        int fn =0;
+        int fnm2 = 0;
+        int fnm1 = 1;
+        for(int i = 2; i<n; i++){
+            fn = fnm1+fnm2;
+            fnm2 = fnm1;
+            fnm1 = fn;
+        }
+        return fn;
+    }
+}
+
 #endif // ALGORITMOS_H_INCLUDED

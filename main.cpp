@@ -525,11 +525,63 @@ void analizeMagic(){
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////////////////////////////////////
+/*                                 Analisis Magic                                  */
+
+double tryFibo(int n)
+{
+    ///////////////////////////////////////////////
+    // MEDICIÓN
+
+    struct timeval inicio, fin;
+    double time = 0;
+    for(int j = 0; j<10; j++){
+        gettimeofday(&inicio, NULL);;
+
+        fibo(n);
+
+        gettimeofday(&fin, NULL);;
+        double time_taken = (double)(fin.tv_sec - inicio.tv_sec) + (double)(fin.tv_usec - inicio.tv_usec) / 1000000;
+        time = time + time_taken*10;
+    }
+    return time/10;
+}
+
+void analizeFibo(){
+
+    int cantSz = 30;
+
+    Vec<double> times1 = createZerosVector<double>(cantSz);
+
+
+    double temp = 0;
+
+    int len =1000000;
+
+    for(int i = 0; i<cantSz; i++){
+
+        temp = tryFibo(len);
+
+        times1[i] = temp;
+
+        std::cout << "Len: "<< len << std::endl;
+        std::cout << temp << std::endl;
+
+        len = len+1000000;
+    }
+
+    std::cout << std::endl;
+    std::cout << "Fibo times: ";
+    printVector<double>(times1);
+    std::cout << std::endl;
+}
+///////////////////////////////////////////////////////////////////////////////////
+
 
 int main(){
 
     system("pause");
-    analizeMagic();
+    analizeFibo();
     system("pause");
 
     return 0;
