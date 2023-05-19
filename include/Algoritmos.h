@@ -104,7 +104,7 @@ void Transpose(Matrix<T>& a, int n) {
 template <typename T>
 void multiply_matrices(Matrix<T>& a, Matrix<T>& b, Matrix<T>& c, int m, int n, int p) {
     for (int i = 0; i < m; i++) {
-        for (int j = 0; j < p; j++) {
+        for (int j = 0; j < p; j++){
             c[i][j] = 0;
             for (int k = 0; k < n; k++) {
                 c[i][j] += a[i][k] * b[k][j];
@@ -133,7 +133,7 @@ void perm(Vec<T>& a, int k, int n) {
 }
 
 template <typename T>
-int seq_search(Vec<T>& a, int x, int n) {
+int seqSearch(Vec<T>& a, int n, int x) {
     int i = n-1;
     a[0] = x;
     while(a[i] != x) {
@@ -144,7 +144,7 @@ int seq_search(Vec<T>& a, int x, int n) {
 
 
 template <typename T>
-int BinSearch(Vec<T>& a, int n, int x) {
+int binSearch(Vec<T>& a, int n, int x) {
     int low = 1, high = n + 1;
     while(low < high - 1) {
         int mid = (low + high) / 2;

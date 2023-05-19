@@ -34,8 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Algorithm.h" />
 		<Unit filename="include/Algoritmos.h" />
+		<Unit filename="include/matrices.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

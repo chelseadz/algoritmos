@@ -62,7 +62,7 @@ void printVector(Vec<T>& v) {
   int sz = v.size();
 
   for (int i = 0; i < sz; i++) {
-      std::cout << std::setprecision(4) << v[i] << " ";
+      std::cout << std::setprecision(12) << v[i] << " ";
     }
     std::cout << std::endl;
 }
@@ -72,6 +72,25 @@ Vec<T> createZerosVector(int sz) {
   Vec<T> v(sz);
   for (int i = 0; i < sz; i++){
       v[i] = 0;
+  }
+  return v;
+}
+
+template <typename T>
+Vec<T> createSortedVector(int sz) {
+  Vec<T> v(sz);
+  for (int i = 0; i < sz; i++){
+      v[i] = i;
+  }
+  return v;
+}
+
+template <typename T>
+Vec<T> createInverseVector(int sz) {
+  Vec<T> v(sz);
+  sz = sz-1;
+  for (int i = sz; i >= 0; i--){
+      v[i] = i;
   }
   return v;
 }
